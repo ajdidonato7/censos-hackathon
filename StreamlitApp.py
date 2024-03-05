@@ -180,5 +180,12 @@ if text_input:
             st.write("Score: ", score_list[i])
             st.write("Severity: ", re.split("[_.]", documents[i]['filename'])[0][3:])
 
+st.text("")
+st.write("Dataset Analytics")
+col1, col2 = st.columns(2)
 
-st.components.v1.iframe("https://charts.mongodb.com/charts-censos-hackathon-team5-rhfcv/embed/charts?id=65e77e11-f72b-440e-81b2-5c8f03661b53&maxDataAge=3600&theme=light&autoRefresh=true", width=640, height=480, scrolling=False)
+with col1:
+    st.components.v1.iframe("https://charts.mongodb.com/charts-censos-hackathon-team5-rhfcv/embed/charts?id=65e77e11-f72b-440e-81b2-5c8f03661b53&maxDataAge=3600&theme=light&autoRefresh=true", width=400, height=300, scrolling=False)
+
+with col2:
+    st.components.v1.iframe("https://charts.mongodb.com/charts-censos-hackathon-team5-rhfcv/embed/charts?id=65e786fa-b27e-4a74-895d-f5548956daa8&maxDataAge=3600&theme=light&autoRefresh=true", width=400, height=300, scrolling=False)
