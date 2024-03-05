@@ -8,7 +8,7 @@ product_collection = connection["vector_search"]["damage"]
 preTrainedModelName = "clip-ViT-L-14"
 model = SentenceTransformer(preTrainedModelName)
 
-input_image = Image.open("images/03-severe/0001.JPG")
+input_image = Image.open("images/01-minor/0001.JPEG")
 vector_query = model.encode(input_image).tolist()
 pipeline = [
     {

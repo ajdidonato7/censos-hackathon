@@ -1,3 +1,3 @@
-mongo_uri = "mongodb+srv://ajdidonato7:ajpassword@cluster0.kzvgk.mongodb.net/"
+mongo_uri = "mongodb+srv://team5:team5password!@cluster0.iarvn.mongodb.net/"
 db = "vector_search"
-collection = "products"
+collection = "damage"
