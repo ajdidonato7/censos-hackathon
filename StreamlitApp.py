@@ -179,3 +179,6 @@ if text_input:
             st.image(similar_images_list[i], width=256)
             st.write("Score: ", score_list[i])
             st.write("Severity: ", re.split("[_.]", documents[i]['filename'])[0][3:])
+
+
+st.components.v1.iframe("https://charts.mongodb.com/charts-censos-hackathon-team5-rhfcv/embed/charts?id=65e77e11-f72b-440e-81b2-5c8f03661b53&maxDataAge=3600&theme=light&autoRefresh=true", width=640, height=480, scrolling=False)
