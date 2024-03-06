@@ -22,6 +22,18 @@ struct ItemDetail: View {
             }
             Section {
                 VStack {
+                    HStack {
+                        Text("Severity: " + (item.severity ?? "no severity"))
+                        Spacer()
+                    }
+                    HStack {
+                        Text("Claim Estimate: $\(convertEstimate(estimate: item.claim_estimate ?? 0.0))")
+                        Spacer()
+                    }
+                }
+            }
+            Section {
+                VStack {
                     if (item.image != nil && item.image!.picture != nil) {
                         Image(uiImage: UIImage(data: item.image!.picture!)!)
                             .resizable()
@@ -36,5 +48,9 @@ struct ItemDetail: View {
             }
         }
         .navigationBarTitle("Update Item", displayMode: .inline)
+    }
+    
+    private func convertEstimate (estimate: Double) -> String {
+        return String(format: "%.2f", estimate)
     }
 }
