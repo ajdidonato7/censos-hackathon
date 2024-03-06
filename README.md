@@ -3,12 +3,12 @@ Team 5: Censos Hackathon
 
 ## Project Name: AdjusterAI
 
-#### Step 1: Installing requirements\
+#### Step 1: Installing requirements
 
 Optional: Creating Python venv\
 ```python -m venv env```\
 ```chmod +x env/bin/activate```\
-```source env/bin/activate```\
+```source env/bin/activate```
 
 Install necessary packages\
 ```pip install streamlit```\
