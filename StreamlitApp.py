@@ -12,7 +12,7 @@ from pymongo.server_api import ServerApi
 
 
 st.set_page_config(page_title="Insurance Claim - Car Damage Image Search", layout="wide")
-st.title("Auto Insurance - Multimodal Search")
+st.title("AI Adjuster - Multimodal Search")
 st.caption("Search public 'car damage' dataset")
 
 
