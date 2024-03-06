@@ -194,9 +194,6 @@ if text_input:
     cols = st.columns(3)
     for i in range(1):
         with cols[i % 3]:
-            # st.image(similar_images_list[i], width=256)
-            # st.write("Score: ", score_list[i])
-            # st.write("Severity: ", re.split("[_.]", documents[i]['filename'])[0][3:])
             st.write("$ ", documents[i]['claim_amount'])
             st.write("Disclaimer: ", "Repair estimates are based out of system gestimate the final amount would show up post approval from adjuster.")
 
