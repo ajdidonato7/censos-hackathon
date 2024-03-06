@@ -1,0 +1,5 @@
+{
+    "name": "insurance-claim",
+    "provider_region": "aws-us-east-1",
+    "deployment_model": "LOCAL"
+}
