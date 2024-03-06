@@ -7,7 +7,7 @@ A collection of artificial intelligence applications that are designed to simpli
 
 
 
-# Architectural Diagram
+## Architectural Diagram
 ![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/c9519f75-6680-498a-b5ed-8d02d4b7ef6f)
 
 
