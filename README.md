@@ -24,3 +24,7 @@ Install necessary packages\
 -Upload a photo to see how the adjuster finds similar items from the dataset and suggests a severity level with claim estimate
 
 -Type some text to see how the adjuster finds similar items based on your description and suggests a severity leve with claim estimate
+
+# Architectural Diagram
+![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/c9519f75-6680-498a-b5ed-8d02d4b7ef6f)
+
