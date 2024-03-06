@@ -30,6 +30,19 @@ Install necessary packages\
 
 -Type some text to see how the adjuster finds similar items based on your description and suggests a severity leve with claim estimate
 
+##### Step 4 : Creating Vector Index search
+
+![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/10b7eb1a-01a4-460a-af65-469726d65db9)
+
+![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/be0043fc-6735-4a68-9e05-50dea50bfa84)
+
+**Index Name** : **claim_image_search**
+
+![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/dd01f658-9215-4b82-9f2b-85d3d0d5ba7e)
+
+
+
+
 # Architectural Diagram
 ![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/c9519f75-6680-498a-b5ed-8d02d4b7ef6f)
 
