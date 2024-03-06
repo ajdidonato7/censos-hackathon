@@ -26,10 +26,7 @@ Install necessary packages\
 ```pip install python-dotenv```\
 ```pip install pymongo```
 
-#### Step 2: Launching the streamlit web app
-```streamlit run StreamlitApp.py```
-
-#### Step 3 : Creating Vector Index search
+#### Step 2 : Creating Vector Index search
 
 ![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/10b7eb1a-01a4-460a-af65-469726d65db9)
 
@@ -39,7 +36,10 @@ Install necessary packages\
 
 ![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/dd01f658-9215-4b82-9f2b-85d3d0d5ba7e)
 
-##### Step 4: Testing out the web app
+#### Step 3: Launching the streamlit web app
+```streamlit run StreamlitApp.py```
+
+#### Step 4: Testing out the web app
 
 -Upload a photo to see how the adjuster finds similar items from the dataset and suggests a severity level with claim estimate
 
