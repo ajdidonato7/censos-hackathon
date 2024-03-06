@@ -3,7 +3,7 @@ Team 5: Censos Hackathon
 
 ## Project Name: AdjusterAI
 
-Step 1: Installing requirements\
+#### Step 1: Installing requirements\
 
 Optional: Creating Python venv\
 ```python -m venv env```\
@@ -16,10 +16,10 @@ Install necessary packages\
 ```pip install python-dotenv```\
 ```pip install pymongo```
 
-Step 2: Launching the streamlit web app
+#### Step 2: Launching the streamlit web app
 ```streamlit run StreamlitApp.py```
 
-Step 3: Testing out the web app
+#### Step 3: Testing out the web app
 
 -Upload a photo to see how the adjuster finds similar items from the dataset and suggests a severity level with claim estimate
 
