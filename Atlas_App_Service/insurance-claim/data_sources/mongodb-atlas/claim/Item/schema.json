@@ -1,0 +1,52 @@
+{
+    "title": "Item",
+    "type": "object",
+    "required": [
+        "_id",
+        "isComplete",
+        "owner_id",
+        "summary"
+    ],
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "image": {
+            "title": "Photo",
+            "type": "object",
+            "required": [
+                "_id",
+                "date"
+            ],
+            "properties": {
+                "_id": {
+                    "bsonType": "string"
+                },
+                "date": {
+                    "bsonType": "date"
+                },
+                "picture": {
+                    "bsonType": "binData"
+                },
+                "thumbNail": {
+                    "bsonType": "binData"
+                }
+            }
+        },
+        "isComplete": {
+            "bsonType": "bool"
+        },
+        "owner_id": {
+            "bsonType": "string"
+        },
+        "picture": {
+            "bsonType": "binData"
+        },
+        "summary": {
+            "bsonType": "string"
+        },
+        "thumbNail": {
+            "bsonType": "binData"
+        }
+    }
+}

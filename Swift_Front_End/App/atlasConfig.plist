@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>appId</key>
+	<string>insurance-claim-dnspr</string>
+	<key>appUrl</key>
+	<string>https://services.cloud.mongodb.com/groups/65e601a0643d781e6dd88b78/apps/65e7229178dae25d052e05ec</string>
+	<key>baseUrl</key>
+	<string>https://services.cloud.mongodb.com</string>
+	<key>clientApiBaseUrl</key>
+	<string>https://us-east-1.aws.services.cloud.mongodb.com</string>
+	<key>dataApiBaseUrl</key>
+	<string>https://us-east-1.aws.data.mongodb-api.com</string>
+    <key>dataExplorerLink</key>
+    <string>https://cloud.mongodb.com/links/65e601a0643d781e6dd88b78/explorer/Cluster0/database/collection/find</string>
+    <key>dataSourceName</key>
+    <string>mongodb-atlas</string>
+</dict>
+</plist>
