@@ -104,7 +104,7 @@ if uploaded_file is not None:
       {
            "$project": {
                 "filename": 1,
-                "data": 1,
+                "claim_amount": 1,
                 "embedding": 1,
                 "score": {"$meta": "vectorSearchScore"}
             }
@@ -118,6 +118,7 @@ if uploaded_file is not None:
 
     for i in range(5):
         image_file = documents[i]['filename']
+        image_claim_amount = documents[i]['claim_amount']
         image_path = os.path.join(image_folder, image_file)
         similar_images_list.append(image_path)
         score = documents[i]['score']
@@ -132,6 +133,14 @@ if uploaded_file is not None:
             st.image(similar_images_list[i], width=256)
             st.write("Score: ", score_list[i])
             st.write("Severity: ", re.split("[_.]", documents[i]['filename'])[0][3:])
+    # Recommendation with the highest score
+    st.subheader("Recommendation and estimated cost")
+    cols = st.columns(3)
+    for i in range(1):
+        with cols[i % 3]:
+            st.write("$ ", documents[i]['claim_amount'])
+            st.write("Disclaimer: ", "Repair estimates are based out of system gestimate the final amount would show up post approval from adjuster.")
+
 
 # Search with text
 text_input = st.text_input('Search with text:')
@@ -152,7 +161,7 @@ if text_input:
       {
             "$project": {
                 "filename": 1,
-                "data": 1,
+                "claim_amount": 1,
                 "embedding": 1,
                 "score": {"$meta": "vectorSearchScore"}
             }
@@ -166,6 +175,7 @@ if text_input:
 
     for i in range(5):
         image_file = documents[i]['filename']
+        image_claim_amount = documents[i]['claim_amount']
         image_path = os.path.join(image_folder, image_file)
         similar_images_list.append(image_path)
         score = documents[i]['score']
@@ -179,6 +189,17 @@ if text_input:
             st.image(similar_images_list[i], width=256)
             st.write("Score: ", score_list[i])
             st.write("Severity: ", re.split("[_.]", documents[i]['filename'])[0][3:])
+    # Recommendation with the highest score
+    st.subheader("Recommendation and estimated cost")
+    cols = st.columns(3)
+    for i in range(1):
+        with cols[i % 3]:
+            # st.image(similar_images_list[i], width=256)
+            # st.write("Score: ", score_list[i])
+            # st.write("Severity: ", re.split("[_.]", documents[i]['filename'])[0][3:])
+            st.write("$ ", documents[i]['claim_amount'])
+            st.write("Disclaimer: ", "Repair estimates are based out of system gestimate the final amount would show up post approval from adjuster.")
+
 
 st.text("")
 st.write("Dataset Analytics")
