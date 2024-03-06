@@ -22,8 +22,14 @@ struct ItemDetail: View {
             }
             Section {
                 VStack {
-                    Text("Severity: " + (item.severity ?? "no severity"))
-                    Text("Claim Estimate \(convertEstimate(estimate: item.claim_estimate ?? 0.0))")
+                    HStack {
+                        Text("Severity: " + (item.severity ?? "no severity"))
+                        Spacer()
+                    }
+                    HStack {
+                        Text("Claim Estimate: $\(convertEstimate(estimate: item.claim_estimate ?? 0.0))")
+                        Spacer()
+                    }
                 }
             }
             Section {
@@ -45,6 +51,6 @@ struct ItemDetail: View {
     }
     
     private func convertEstimate (estimate: Double) -> String {
-        return String(estimate)
+        return String(format: "%.2f", estimate)
     }
 }
