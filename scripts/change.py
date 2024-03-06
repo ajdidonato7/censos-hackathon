@@ -13,7 +13,7 @@ from pymongo.server_api import ServerApi
 
 client = pymongo.MongoClient("mongodb+srv://team5:team5password!@cluster0.iarvn.mongodb.net/")
 db = client["claim"]
-collection = db["item_test"]
+collection = db["Item"]
 
 print(".......changestream started......")
 # load environment variable
@@ -57,53 +57,57 @@ def get_multimodal_vector(input_image_base64=None, input_text=None):
 
 change_stream = collection.watch()
 for change in change_stream:
-    change_doc_id = change["fullDocument"]["_id"]
-    print(change_doc_id)
-    image = change["fullDocument"]["image"]["picture"]
-    # import pdb; pdb.set_trace()
-    # image = base64.b64decode(image)
-    image = base64.b64encode(image)
-    image = image.decode('utf-8')
-    vector = get_multimodal_vector(input_image_base64=image)
-    print("vector is ", vector)
 
-    vector_db = client['claim_resolution']
-    vector_coll = vector_db['car_damage_photos']
+    try:
+        change_doc_id = change["fullDocument"]["_id"]
+        print(change_doc_id)
+        image = change["fullDocument"]["image"]["picture"]
+        # import pdb; pdb.set_trace()
+        # image = base64.b64decode(image)
+        image = base64.b64encode(image)
+        image = image.decode('utf-8')
+        vector = get_multimodal_vector(input_image_base64=image)
+        print("vector is ", vector)
 
-    documents = vector_coll.aggregate([ # add these documents to a field for the document that comes with change stream
-    {
-        "$vectorSearch": {
-            "index": "claim_image_search",
-            "path": "embedding",
-            "queryVector": vector,
-            "numCandidates": 100,
-            "limit": 5,
-        }
-    }]
-    )
+        vector_db = client['claim_resolution']
+        vector_coll = vector_db['car_damage_photos']
 
-    documents = list(documents)
-
-    total = 0
-    count = 0
-    for document in documents:
-        count += 1
-        total += document["claim_amount"]
-
-    average = total / count
-
-    collection.update_one(
+        documents = vector_coll.aggregate([ # add these documents to a field for the document that comes with change stream
         {
-            "_id": change_doc_id
-        },
-        {
-            "$set": {
-                'claim_estimate': average,
-                'severity': documents[0]["severity"],
-                "matches": documents
+            "$vectorSearch": {
+                "index": "claim_image_search",
+                "path": "embedding",
+                "queryVector": vector,
+                "numCandidates": 100,
+                "limit": 5,
             }
-        }
-    )
+        }]
+        )
+
+        documents = list(documents)
+
+        total = 0
+        count = 0
+        for document in documents:
+            count += 1
+            total += document["claim_amount"]
+
+        average = total / count
+
+        collection.update_one(
+            {
+                "_id": change_doc_id
+            },
+            {
+                "$set": {
+                    'claim_estimate': average,
+                    'severity': documents[0]["severity"],
+                    "matches": documents
+                }
+            }
+        )
+    except:
+        print("error occurred")
 
 
 

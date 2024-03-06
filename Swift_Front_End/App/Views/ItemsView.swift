@@ -25,7 +25,7 @@ struct ItemsView: View {
                         CreateItemView(isInCreateItemView: $isInCreateItemView, user: user)
                     }
                     else {
-                        Toggle("Show Only My Tasks", isOn: $showMyItems).padding()
+                        Toggle("Show Only My Claims", isOn: $showMyItems).padding()
                         ItemList()
                     }
                 }
