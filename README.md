@@ -45,6 +45,9 @@ Install necessary packages\
 
 -Type some text to see how the adjuster finds similar items based on your description and suggests a severity leve with claim estimate
 
+![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/f3bf8b84-07e3-44dd-b07f-ac9708e34c2a)
+
+
 
 
 
