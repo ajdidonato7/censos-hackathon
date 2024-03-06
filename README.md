@@ -52,6 +52,7 @@ Install necessary packages\
 ![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/d84563ae-0614-4cd9-8034-dea12a02eae7)
 
 
+<img width="373" alt="image" src="https://github.com/ajdidonato7/censos-hackathon/assets/50722159/40823879-057f-4076-8f2c-8fe16689c22e">
 
 
 
