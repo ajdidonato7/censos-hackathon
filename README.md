@@ -6,6 +6,11 @@ Team 5: Censos Hackathon
 A collection of artificial intelligence applications that are designed to simplify and improve the process of submitting claims for automotive damage.
 
 
+
+# Architectural Diagram
+![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/c9519f75-6680-498a-b5ed-8d02d4b7ef6f)
+
+
 ###Installation Instructions : 
 
 #### Step 1: Installing requirements
@@ -24,13 +29,7 @@ Install necessary packages\
 #### Step 2: Launching the streamlit web app
 ```streamlit run StreamlitApp.py```
 
-#### Step 3: Testing out the web app
-
--Upload a photo to see how the adjuster finds similar items from the dataset and suggests a severity level with claim estimate
-
--Type some text to see how the adjuster finds similar items based on your description and suggests a severity leve with claim estimate
-
-##### Step 4 : Creating Vector Index search
+#### Step 3 : Creating Vector Index search
 
 ![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/10b7eb1a-01a4-460a-af65-469726d65db9)
 
@@ -40,9 +39,15 @@ Install necessary packages\
 
 ![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/dd01f658-9215-4b82-9f2b-85d3d0d5ba7e)
 
+##### Step 4: Testing out the web app
+
+-Upload a photo to see how the adjuster finds similar items from the dataset and suggests a severity level with claim estimate
+
+-Type some text to see how the adjuster finds similar items based on your description and suggests a severity leve with claim estimate
 
 
 
-# Architectural Diagram
-![image](https://github.com/ajdidonato7/censos-hackathon/assets/50722159/c9519f75-6680-498a-b5ed-8d02d4b7ef6f)
+
+
+
 
