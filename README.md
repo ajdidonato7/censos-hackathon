@@ -3,6 +3,11 @@ Team 5: Censos Hackathon
 
 ## Project Name: AdjusterAI
 
+A collection of artificial intelligence applications that are designed to simplify and improve the process of submitting claims for automotive damage.
+
+
+###Installation Instructions : 
+
 #### Step 1: Installing requirements
 
 Optional: Creating Python venv\
