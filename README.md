@@ -49,6 +49,35 @@ Install necessary packages\
 
 
 
+SwiftUI Template App
+A todo list application built with the Realm Swift SDK and Atlas Device Sync.
+
+You can follow along with the SwiftUI Tutorial to see how to build, modify, and run this template app.
+
+This project uses Swift Package Manager (SPM) to load dependencies.
+
+Configuration
+For this template app to work, you must ensure that App/atlasConfig.plist exists and contains the following properties:
+
+appId: your Atlas App Services App ID.
+baseUrl: the App Services backend URL. This should be https://services.cloud.mongodb.com in most cases.
+Using the Atlas App Services UI
+The easiest way to use this template app is to log on to Atlas App Services and click the Create App From Template button. Choose Real Time Sync, and then follow the prompts. While the backend app is being created, you can download this SwiftUI template app pre-configured for your new app.
+
+Cloning from GitHub
+If you have cloned this repository from the GitHub mongodb/template-app-swiftui-todo repository, you must create a separate App Services App with Device Sync enabled to use this client. You can find information about how to do this in the Atlas App Services documentation page: Template Apps -> Create a Template App
+
+Once you have created the App Services App, replace any value in this client's appId field with your App Services App ID. For help finding this ID, refer to: Find Your Project or App Id
+
+Download the Client as a Zip File
+If you have downloaded this client as a .zip file from the Atlas App Services UI, it does not contain the App Services App ID. You must replace any value in this client's appId field in App/atlasConfig.plist with your App Services App ID. For help finding this ID, refer to: Find Your Project or App Id
+
+If you did not replace the App ID, you may see an Error: unsupported URL message.
+
+Run the app
+Open App.xcodeproj in Xcode.
+Wait for SPM to download dependencies.
+Press "Run".
 
 
 
